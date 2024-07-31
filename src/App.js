@@ -1,11 +1,13 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import News from "./components/News";
 
 function App() {
 	return (
 		<>
+			<Navbar title="Taza Khabar" />
 			<div className="container">
-				<Navbar />
+				<News />
 			</div>
 		</>
 	);
