@@ -14,12 +14,6 @@ export default function News() {
 						newsUrl="TODO"
 					/>
 				</div>
-				<div className="col-md-4">
-					<NewsItem title="title" description="description" />
-				</div>
-				<div className="col-md-4">
-					<NewsItem title="title" description="description" />
-				</div>
 			</div>
 		</div>
 	);
