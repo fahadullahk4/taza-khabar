@@ -3,15 +3,17 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoadingBar from "react-top-loading-bar";
 
 function App() {
-	const pageSize = 5;
+	const pageSize = 6;
 	const apiKey = process.env.REACT_APP_NEWS_API;
 	const [progress, setProgress] = useState(0);
 	return (
 		<>
 			<Router>
 				<Navbar title="Taza Khabar" />
+				<LoadingBar height={3} color="#f11946" progress={progress} />
 				<div className="container">
 					<Routes>
 						<Route
@@ -22,7 +24,7 @@ function App() {
 									apiKey={apiKey}
 									key="general"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="general"
 								/>
 							}
@@ -35,7 +37,7 @@ function App() {
 									apiKey={apiKey}
 									key="business"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="business"
 								/>
 							}
@@ -48,7 +50,7 @@ function App() {
 									apiKey={apiKey}
 									key="entertainment"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="entertainment"
 								/>
 							}
@@ -61,7 +63,7 @@ function App() {
 									apiKey={apiKey}
 									key="general"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="general"
 								/>
 							}
@@ -74,7 +76,7 @@ function App() {
 									apiKey={apiKey}
 									key="health"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="health"
 								/>
 							}
@@ -87,7 +89,7 @@ function App() {
 									apiKey={apiKey}
 									key="science"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="science"
 								/>
 							}
@@ -100,7 +102,7 @@ function App() {
 									apiKey={apiKey}
 									key="sports"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="sports"
 								/>
 							}
@@ -113,7 +115,7 @@ function App() {
 									apiKey={apiKey}
 									key="technology"
 									pageSize={pageSize}
-									country="pk"
+									country="us"
 									category="technology"
 								/>
 							}
